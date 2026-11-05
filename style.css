@@ -1400,16 +1400,19 @@ button.detail-link[data-note="user-notes"]{ font-size:13px }
 .rivals-title, .journey h3, .section-intro h3{ font-size:var(--fs-h3); line-height:1.3 }
 .journey h3{ font-weight:600 }
 
-/* 导读统一 14px */
-.ac-lead, .hero-lead, .rivals-lede{ font-size:var(--fs-lead); line-height:1.75 }
+/* 普通区块导读沿用全局字号，首屏简介单独放大。 */
+.ac-lead, .rivals-lede{ font-size:var(--fs-lead); line-height:1.75 }
+.hero-lead{ max-width:min(760px,60%); font-size:20px; line-height:1.75 }
 
 @media(max-width:760px){
   .audience-panel h4{ font-size:20px }
   .career-grid h4, #career .career .career-grid h4{ font-size:19px }
   .rivals-title, .journey h3, .section-intro h3{ font-size:28px }
-  .ac-lead, .hero-lead, .rivals-lede{ font-size:13px }
+  .ac-lead, .rivals-lede{ font-size:13px }
+  .hero-lead{ max-width:none; font-size:16px }
 }
 @media print{
+  .hero-lead{ max-width:none; font-size:10pt }
   .audience-panel h4{ font-size:15pt }
   .career-grid h4, #career .career .career-grid h4{ font-size:11pt }
   .ac-rail h4, #loop .ac-rail h4{ font-size:11pt }
